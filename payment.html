@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payment</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit/Debit Card</title>
+  
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+   
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+   <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+   <!-- jQuery library -->
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+   
+   <!-- Popper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+   <!-- Latest compiled JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+   
+   
+  </head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,600;1,600&family=Ubuntu:wght@500&family=Unbounded:wght@600&display=swap');
+body{
+  background-color: #323131;
+  overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.skycolor {
+    color: rgb(0, 106, 255);
+}
+
+/* navbar code  */
+.navbar{
+    height: 60px;
+}
+.navbar-brand ,.navbar-brand span{
+    font-family: 'Pacifico', cursive;
+}
+.navbar-nav .nav-item {
+    color: #fff;
+
+}
+
+.navbar-nav .nav-item a:hover {
+    color: rgb(0, 106, 255);
+    border-bottom: 2px solid rgb(0, 106, 255);
+
+}
+
+#main{
+  background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url('pics/holly/hollybg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 700px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 10px 57px 48px -14px rgba(0, 0, 0, 0.19);
+    
+}
+#head{
+  font-weight: 600;
+  color: #0997fc7d;;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+#main input, select{
+    box-shadow: none !important;
+}
+#main input:focus{
+    border: 1px solid darkblue;
+    
+}
+#main select:focus{
+    border: 1px solid darkblue;
+}
+#button{
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    background-size: 200% 100%;
+    transition: 0.6s ease-in-out;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    color: white;
+}
+#button:hover{
+    background-position: 100% 0;
+    transition: 0.6s ease-in-out;
+}
+  </style>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white fs-3" href="#"> <span class="skycolor font-weight-bold">Cool</span>Star</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item ">
+                <a class="nav-link text-white fs-5" aria-current="page" href="index.html">Home</a>
+              </li>
+            
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fs-5 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Movies
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="hollywood.html">Hollywood</a></li>
+                  <li><a class="dropdown-item" href="bollywood.html">Bollywood</a></li>  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link fs-5 text-white">About</a>
+              </li>
+             
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container bg-light" id="main">
+      <div class="head d-flex mt-3 mx-4 justify-content-between text-white">
+        <h4 class=" fs-3 " id="head">Payment Details</h4>
+        <p><i class="fa-brands fa-cc-visa fs-1" style="color: #052fd6;"></i><i class="fa-brands fa-cc-mastercard fs-1 mx-2" style="color: #e72b0a;"></i></p>
+      </div>
+        <!--START FORM-->
+        <form action="#">                   
+
+        <!--START INNER CONTENTS-->    
+        <div class="container">
+
+            <!--START 1ST ROW FOR CARD NUMBER-->
+            <div class="row mt-4 ms-4 me-4">
+                <div class="input-group">
+                    <span class="input-group-text" id="txt"><i class="fa-solid fa-credit-card me-2"></i>Card Number</span>
+                    <input type="text" class="form-control" placeholder="2222 4444 5555 6666" id="card_no" 
+                        required maxlength="19" onkeypress="cardSpace()"> 
+                </div>
+            </div>       <!--END 1ST ROW FOR CARD NUMBER-->
+
+             <!--START 2ND ROW FOR EXPIRY DATE-->
+            <div class="row mt-4 ms-4 me-4 ">
+                <div class="input-group">
+                    <span class="input-group-text" id="txt"><i class="fa-solid fa-calendar-check me-2"></i></i>Valid till</span>
+                    <select name="month" class="form-select" id="month" required>
+                        <option value="0" class="text-center text-secondary">-----Month-----</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select name="year" class="form-select" id="year" required>
+                        <option value="0" class="text-center text-secondary">-----Year-----</option>
+                        <option value="01">2023</option>
+                        <option value="02">2024</option>
+                        <option value="03">2025</option>
+                        <option value="04">2026</option>
+                        <option value="05">2027</option>
+                        <option value="06">2028</option>
+                        <option value="07">2029</option>
+                        <option value="08">2030</option>
+                    </select>   
+                </div>
+            </div>       <!--END 2ND ROW FOR EXPIRY DATE-->
+            
+            <!--START 3RD ROW FOR CARD HOLDER NAME AND CVV NUMBER-->
+            <div class="row mt-4 ms-4 me-4">
+                <div class="input-group">
+                    <span class="input-group-text" id="txt"><i class="fa-solid fa-user me-2"></i></i>Name</span>
+                    <input type="text" class="form-control text-capitalize" placeholder="John Maria" id="card_name" required autocomplete="off">
+
+                    <!--CVV NUMBER-->
+                    <span class="input-group-text ms-4" id="txt"><i class="fa-solid fa-credit-card me-2"></i></i>CVV</span>
+                    <input type="password" class="form-control" placeholder="123" class="me-3" id="cvv" required>
+                </div>
+            </div>      <!--END 3RD ROW FOR CARD HOLDER NAME AND CVV NUMBER-->
+
+            <!--START 4TH ROW OF BUTTON-->
+            <div class="row mt-4 ms-4 me-4">
+                <div class="input-group">
+                    <button class="btn w-100" id="button">Pay Now</button>     
+                </div> 
+            </div>      <!--END 4TH ROW OF BUTTON-->
+        </div>      <!--END INNER CONTENTS-->   
+        </form>     <!--END FORM-->    
+    </div> 
+
+
+    <script>
+      function cardSpace(){
+    var carddigit = document.getElementById("card_no").value;
+
+    if((carddigit.length == 4) || (carddigit.length == 9) || (carddigit.length == 14)){
+        document.getElementById("card_no").value = carddigit + " ";
+        document.getElementById("card_no").max = 1;
+    }
+}
+
+$(document).ready(function(){
+    $("#button").click(function(){
+        var cno = $("#card_no").val();
+        var expmonth = $("#month").val();
+        var expyear = $("#year").val();
+        var cname = $("#card_name").val();
+        var ccv = $("#cvv").val();
+        var flag = 0;
+
+        if(cno == ""){
+            alert("**Please fill Card Number!!");
+            $("#card_no").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else if((cno.length != 19)){
+            alert("**Card Number must be 16 digits!!");
+            $("#card_no").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else if((cno.charAt(0) != 3) && (cno.charAt(0) != 4) && (cno.charAt(0) != 5)){
+            alert("**Card number initial must be 3, 4 or 5!!");
+            $("#card_no").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else{
+            $("#card_no").css("border-color", "green");
+            flag = 1;
+        }
+
+        if(expmonth == 0){
+            alert("**Please select the month!!");
+            $("#month").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else{
+            $("#month").css("border-color", "green");
+            flag = 1;
+        }
+        
+        if(expyear == 0){
+            alert("**Please select the year!!");
+            $("#year").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else{
+            $("#year").css("border-color", "green");
+            flag = 1;
+        }
+
+        if(cname == ""){
+            alert("**Please fill Card holder name!!");
+            $("#card_name").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else if(!isNaN(cname)){
+            alert("**Card holder name must be in letters!!");
+            $("#card_name").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else if((cname.length < 3) || (cname.length > 15)){
+            alert("**Name can be in between 3 to 15 letters!!");
+            $("#card_name").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else if(!cname.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+            alert("**Please enter full name!!");
+            $("#card_name").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else{
+            $("#card_name").css("border-color", "green");
+            flag = 1;
+        }
+
+        if(ccv == ""){
+            alert("**Please fill CVV number!!");
+            $("#cvv").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else if(isNaN(ccv)){
+            alert("**CVV must be number!!");
+            $("#cvv").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else if(ccv.length != 3){
+            alert("**CVV must be 3 digits!!");
+            $("#cvv").css("border-color", "red");
+            flag = 0;
+            return false;
+        }
+        else{
+            $("#cvv").css("border-color", "green");
+            flag = 1;
+        }
+
+        if(flag)
+            return true;
+        else
+            return false;
+        
+    });
+});
+    </script>
+
+</body>
+</html>

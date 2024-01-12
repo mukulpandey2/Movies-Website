@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src=""></script>
+</head>
+<body>
+  
+  <section class="hollymovies ">
+      <div class="container">
+        <div class="hollywood">
+          <div class="text-dark pb-2">
+            <h2>Hollywood Movies</h2>
+          </div>
+          <div class=" row hollywoodCard container">
+            <!-- <div class=" col-sm-12 col-md-3 col-lg-3 col-12">
+              <div class="card my-2 bg-dark text-white">
+                <img src="pics/holly/pxfuel.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Pirates of the Caribbean</h5>
+                  <p class="card-text">
+                    <b>Director :</b>
+                    Louis Leterrier<br />
+                    <b>Writers :</b>
+                    Zak Penn, Stan Lee, Jack Kirby<br />
+                    <b>Stars :</b>
+                    Edward Norton, Liv Tyler, Tim Roth
+                  </p>
+                  <a href="#" class="btn btn-danger">Buy Now</a>
+                  <button class="btn btn-success descBtn">Desciption</button>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+    </section>
+  
+  
+    <!-- Full screen modal -->
+    <div class="modal fade " id="galleryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg  ">
+        <div class="modal-content bg-light">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex justify-content-around">
+            <div class="descBody">
+              <img src="" alt="modal-img" class="modal-img">
+            </div>
+              <div class="descBody">
+              <h1 class="movieTitle py-5">helloo</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script>
+
+ const hollywoodMovies = [
+  {
+    MovieImage: "pics/holly/pxfuel.jpg",
+    MovieTitle: "Pirates of the Caribbean",
+    Director: " Louis Leterrier",
+    Writers: "Zak Penn, Stan Lee, Jack Kirby",
+    Stars: "Edward Norton, Liv Tyler, Tim Roth",
+  }, 
+  {
+    MovieImage: "pics/holly/pxfuel (2).jpg",
+    MovieTitle: "Gods of Egypt",
+    Director: " Louis Leterrier",
+    Writers: "Zak Penn, Stan Lee, Jack Kirby",
+    Stars: "Edward Norton, Liv Tyler, Tim Roth",
+  }, {
+    MovieImage: "pics/holly/pxfuel (3).jpg",
+    MovieTitle: "Morbius",
+    Director: " Louis Leterrier",
+    Writers: "Zak Penn, Stan Lee, Jack Kirby",
+    Stars: "Edward Norton, Liv Tyler, Tim Roth",
+  }, {
+    MovieImage: "pics/holly/pxfuel (4).jpg",
+    MovieTitle: "The Lost City",
+    Director: " Louis Leterrier",
+    Writers: "Zak Penn, Stan Lee, Jack Kirby",
+    Stars: "Edward Norton, Liv Tyler, Tim Roth",
+  }, {
+    MovieImage: "pics/holly/pxfuel (1).jpg",
+    MovieTitle: "Jack the Giant Slayer",
+    Director: " Louis Leterrier",
+    Writers: "Zak Penn, Stan Lee, Jack Kirby",
+    Stars: "Edward Norton, Liv Tyler, Tim Roth",
+  }, {
+    MovieImage: "pics/holly/avatar.jpg",
+    MovieTitle: "Avatar",
+    Director: " Louis Leterrier",
+    Writers: "Zak Penn, Stan Lee, Jack Kirby",
+    Stars: "Edward Norton, Liv Tyler, Tim Roth",
+  }, {
+    MovieImage: "pics/holly/carrie.jpg",
+    MovieTitle: "Carrie",
+    Director: " Louis Leterrier",
+    Writers: "Zak Penn, Stan Lee, Jack Kirby",
+    Stars: "Edward Norton, Liv Tyler, Tim Roth",
+  }, {
+    MovieImage: "pics/holly/hulk.jpg",
+    MovieTitle: "The Incredible Hulk",
+    Director: " Louis Leterrier",
+    Writers: "Zak Penn, Stan Lee, Jack Kirby",
+    Stars: "Edward Norton, Liv Tyler, Tim Roth",
+  }];
+  
+
+
+
+  const hollywoodContainer = document.querySelector('.hollywoodCard');
+// console.log(postContainer)
+const hollyMethod = ()=>{
+  hollywoodMovies.map((postdata , index)=>{
+    // console.log(postdata);
+    // console.log(index);
+  
+
+    const hollyElement = document.createElement('div');
+    hollyElement.classList.add('col-sm-12','col-md-6','col-lg-3','col-12')
+    hollyElement.innerHTML=`
+      <div class="card my-2 bg-dark text-white">
+        <img src="${postdata.MovieImage}" class="card-img-top object-fit-fill gallery-item" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">${postdata.MovieTitle}</h5>
+          <p class="card-text">
+            <b>Director :</b>
+            ${postdata.Director}
+            <br />
+            <b>Writers :</b>
+            ${postdata.Writers}<br />
+            <b>Stars :</b>
+            ${postdata.Stars}
+          </p>
+         <div class="position-relative">
+        
+          <a href="payment.html" class="btn btn-danger  top-0 start-0" target="_blank">Buy Now</a>
+          <button class="btn btn-success  top-0 end-0 descBtn" >Description</button>
+          </div>
+        </div>
+      </div>
+  
+  
+   
+    `
+    hollywoodContainer.appendChild(hollyElement);
+
+    
+  });
+}
+hollyMethod();
+
+
+</script>
+</html>

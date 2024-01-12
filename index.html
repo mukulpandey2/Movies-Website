@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="movieCSS/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- navbar is here -->
+
+  <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fs-3" href="#"> <span class="skycolor font-weight-bold">Cool</span>Star</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link text-white fs-5" aria-current="page" href="index.html">Home</a>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Movies
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="hollywood.html">Hollywood</a></li>
+              <li><a class="dropdown-item" href="bollywood.html">Bollywood</a></li>  
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link fs-5 text-white">About</a>
+          </li>
+         
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- crousell -->
+  <div class="FirstPage">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner w-100">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <video  autoplay muted class="d-block w-100">
+        <source src="video/marvel.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>The Marvels</h1>
+        <p>Marvel Studios</p>
+        <p>
+          <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-regular fa-star-half-stroke fs-3"></i>
+        <i class="fa-regular fa-star fs-3"></i>
+        </p>
+        
+        <p class="act"><span>Action</span> <span>Adventure</span> <span>Fantasy</span></p>
+        <p>2023</p>
+        <p class="fs-1"><i class="fa-regular fa-circle-play"></i></p>
+      </div>
+    </div>
+    <div class="carousel-item w-100==" data-bs-interval="2000">
+      <video autoplay muted class="d-block w-100">
+        <source src="video/hanuman.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Hanu Man</h1>
+        <p>RKD Studios</p>
+        <p>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-regular fa-star fs-3"></i>
+        </p>
+        <p class="act"><span>Action</span> <span>Adventure</span> <span>Fantasy</span></p>
+        <p>2023</p>
+        <p class="fs-1"><i class="fa-regular fa-circle-play"></i></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <video autoplay muted >
+        <source src="video/kashmir.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>The Kashmir Files</h1>
+        <p>ZEE Studios</p>
+        <p>
+          <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-solid fa-star fs-3"></i>
+        <i class="fa-regular fa-star-half-stroke fs-3"></i>
+        </p>
+        <p class="act"><span>Drama</span> 
+        <p>2022</p>
+        <p class="fs-1"><i class="fa-regular fa-circle-play"></i></p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> 
+  </div>
+
+
+
+  <!-- tranding movies in hollywood -->
+
+  <section class="trandingHolly pt-5 bg-dark">
+    <div class="container ">
+      <div class="text-center bg-light">
+        <h2 class="skycolor">Movies</h2>
+      </div>
+      <div class="text-white pt-3">
+        <h2> Tranding Hollywood Movies</h2>
+      </div>
+      <div class="row trandinghollywoodCard container">
+        <!-- <div class=" col-sm-12 col-md-3 col-lg-3 col-12 ">
+          <div class="card my-2 bg-dark text-white">
+            <img src="pics/holly/pxfuel.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Pirates of the Caribbean</h5>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>  
+
+
+<!-- tranding movies in bollywood -->
+  <section class="trandingBolly pt-5 bg-dark">
+    <div class="container">
+
+      <div class="text-white">
+        <h2> Tranding Bollywood Movies</h2>
+      </div>
+      <div class="row trandingbollywoodCard container">
+        <!-- <div class=" col-sm-12 col-md-3 col-lg-3 col-12 ">
+          <div class="card my-2 bg-dark text-white">
+            <img src="pics/holly/pxfuel.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Pirates of the Caribbean</h5>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>  
+  
+  <section class="footer">
+    <footer>
+      <h1 class="text-white bg-dark text-center">copyright 2023</h1>
+    </footer>
+  </section>
+  <!-- modal code  -->
+
+
+  <div class="modal fade  " id="modalId">
+    <div class="modal-dialog modal-lg modal-dialog-centered  ">
+      <div class="modal-content " style="transform: scaleX(1.4);">
+        <div class="modal-header pb-2 bg-dark text-white">
+          <h4 class="font-weight-bold ml-4 skycolor">
+            Desciption
+          </h4>
+          <button type="close" class="btn-close bg-white" data-dismiss="modal" aria-label="Close">
+            <!-- <span aria-hidden="true"></span> -->
+          </button>
+        </div>
+        <div class="modal-body ">
+          <div class="row p-3">
+            <div class="col-md-6">
+              <img src="" alt="" width="100%" height="480px" class="rounded">
+            </div>
+            <div class="col-md-6">
+              <h2 class="Mtitle pb-4 "></h2>
+              <span class="font-weight-bold fs-6"> Director : </span>
+              <p class="Mdirector fs-6"></p>
+              <span class="font-weight-bold fs-6"> Writers : </span>
+              <p class="Mwriter fs-6"></p>
+              <span class="font-weight-bold fs-6"> Stars : </span>
+              <p class="Mstars fs-6"></p>
+              <span class="font-weight-bold fs-6"> Language : </span>
+              <p class="Mlang fs-6"> English / Hindi</p>
+              <span class="font-weight-bold fs-6"> Ratings : </span>
+              <p class="Mrating fs-6">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+              </p>
+
+              <a href="payment.html" class="btn btn-danger mt-2">Buy Now</a>
+              <a href="#" class="btn btn-primary mt-2">Watch Trailer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="movieJS/script.js"></script>
+</html>
+
+
+
+

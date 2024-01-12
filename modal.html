@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    .card:hover{
+        box-shadow: 20px 20px 80px -50px #000;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+    }
+    .card-img-top{
+        height: 250px;
+    }
+</style>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">modal</h1>
+    </div>
+    <div class="container mt-4 mb-5">
+    <div class="row">
+        <div class="col-md-4 mt-5">
+            <div class="card" data-toggle="modal" data-target="#modalId">
+                <img src="pics/bolly/Adipurush-2.jpg" alt="" class="card-img-top w-100">
+                <div class="card-body">
+                    <h2 class="card-title">Adipurush</h2>
+                    <div class="d-flex justify-content-between">
+                        <p class="card-text">Adipurush</p>
+                        <p class="card-text mr-4 text-success">$Adipurush</p>
+                    </div>
+                    <a href="#" class="card-link" >more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mt-5" >
+            <div class="card" data-toggle="modal" data-target="#modalId">
+                <img src="pics/bolly/Bheed.jpg" alt="" class="card-img-top w-100">
+                <div class="card-body">
+                    <h2 class="card-title">Bheed</h2>
+                    <div class="d-flex justify-content-between">
+                        <p class="card-text">Bheed</p>
+                        <p class="card-text mr-4 text-success">$Bheed</p>
+                    </div>
+                    <a href="#" class="card-link" >more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mt-5">
+            <div class="card" data-toggle="modal" data-target="#modalId">
+                <img src="pics/bolly/Bholaa.jpg" alt="" class="card-img-top w-100">
+                <div class="card-body">
+                    <h2 class="card-title">Bholaa</h2>
+                    <div class="d-flex justify-content-between">
+                        <p class="card-text">Bholaa</p>
+                        <p class="card-text mr-4 text-success">$Bholaa</p>
+                    </div>
+                    <a href="#" class="card-link" >more</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal code  -->
+    </div>
+</div>
+
+        <div class="modal fade" id="modalId">
+            <div class="modal-dialog bg-success" >
+              <div class="modal-content" style="transform: scaleX(1.4);">
+                <div class="modal-header pb-2">
+                    <h1 class="font-weight-light ml-4">
+                        Desciption
+                    </h1>
+                    <button type="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mt-3 p-3">
+                        <div class="col-md-6">
+                            <img src="" alt="" width="100%" height="280px" class="rounded">
+                        </div>
+                        <div class="col-md-6">
+                           <h2 class="Mtitle"></h2>
+                           <p class="Mwriter" style="box-sizing: border-box;"></p>
+                           <p class="Mstars"></p>
+                           <div class="btn btn-danger mt-2">Buy Now</div>
+                        </div>
+                    </div>
+                </div>
+              </div>  
+            </div>
+        </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $(".card").click(function(){
+            $(".rounded").attr("src",$(this).children().siblings().attr("src"));
+            $(".Mtitle").text($(this).children(".card-body").children().siblings("h2").text());
+            $(".Mwriter").text($(this).children(".card-body").children(".d-flex").find("p:nth(0)").text());
+            $(".Mstars").text($(this).children(".card-body").children(".d-flex").find("p:nth(1)").text());
+            
+        });
+        $(window).resize(function(){
+            if($(window).width()<600){
+                $(".modal-content").css("transform","scaleX(1)");
+            }
+            else{
+                $(".modal-content").css("transform","scaleX(1.4)");
+            }
+        })
+    })
+</script>
+</html>
+
+<!-- <div class="card my-2 bg-dark text-white" data-toggle="modal" data-target="#modalId">
+    <img src="${postdata.MovieImage}" class="card-img-top gallery-item" alt="..." />
+    <h1 class="Mtitle">${postdata.MovieTitle}</h1>
+    <h1 class="Mwriter">${postdata.Writers}</h1>
+    <h1 class="Mstars">${postdata.Stars}</h1>
+  </div> -->
